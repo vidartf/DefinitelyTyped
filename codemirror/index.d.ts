@@ -16,6 +16,8 @@ declare namespace CodeMirror {
 
     function fromTextArea(host: HTMLTextAreaElement, options?: EditorConfiguration): CodeMirror.EditorFromTextArea;
 
+    var commands: any;
+
     var version: string;
 
     /** If you want to define extra methods in terms of the CodeMirror API, it is possible to use defineExtension.
