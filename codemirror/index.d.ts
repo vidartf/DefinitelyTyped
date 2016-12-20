@@ -693,12 +693,12 @@ declare namespace CodeMirror {
     }
 
     interface ScrollInfo {
-        left: any;
-        top: any;
-        width: any;
-        height: any;
-        clientWidth: any;
-        clientHeight: any;
+        left: number;
+        top: number;
+        width: number;
+        height: number;
+        clientWidth: number;
+        clientHeight: number;
     }
 
     interface TextMarker {
