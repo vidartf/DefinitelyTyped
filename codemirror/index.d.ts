@@ -248,8 +248,9 @@ declare namespace CodeMirror {
         You can pass null for either of them to indicate that that dimension should not be changed. */
         setSize(width: any, height: any): void;
 
-        /** Scroll the editor to a given(pixel) position.Both arguments may be left as null or undefined to have no effect. */
-        scrollTo(x: number, y: number): void;
+        /** Scroll the editor to a given(pixel) position.
+         * Both arguments may be left as null or undefined to have no effect. */
+        scrollTo(x: number | null | undefined, y: number | null | undefined): void;
 
         /** Get an { left , top , width , height , clientWidth , clientHeight } object that represents the current scroll position, the size of the scrollable area,
         and the size of the visible area(minus scrollbars). */
