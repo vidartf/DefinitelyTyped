@@ -238,6 +238,8 @@ declare namespace CodeMirror {
             above?: boolean;
             /** When true, will cause the widget to be rendered even if the line it is associated with is hidden. */
             showIfHidden?: boolean;
+            /** The height of the line widget */
+            height?: number;
         }): CodeMirror.LineWidget;
 
 
