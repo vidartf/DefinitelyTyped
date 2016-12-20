@@ -828,8 +828,8 @@ declare namespace CodeMirror {
         or whether it stays fixed during horizontal scrolling (true, the default). */
         fixedGutter?: boolean;
 
-        /** boolean|string. This disables editing of the editor content by the user. If the special value "nocursor" is given (instead of simply true), focusing of the editor is also disallowed. */
-        readOnly?: any;
+        /** This disables editing of the editor content by the user. If the special value "nocursor" is given (instead of simply true), focusing of the editor is also disallowed. */
+        readOnly?: boolean | 'nocursor';
 
         /**Whether the cursor should be drawn when a selection is active. Defaults to false. */
         showCursorWhenSelecting?: boolean;
