@@ -20,6 +20,21 @@ declare namespace CodeMirror {
 
     var version: string;
 
+    interface modespec {
+      [ key: string ]: string | undefined;
+      name?: string;
+      mode: string;
+      mime: string;
+    }
+
+    var modes: {
+      [key: string]: any;
+    };
+
+    var mimeModes: {
+        [key: string]: any;
+    }
+
     /** An object containing default values for all options.
      * You can assign to its properties to modify defaults
      * (though this won't affect editors that have already been created).*/
@@ -1086,6 +1101,15 @@ declare namespace CodeMirror {
      * is a mode specification as in the EditorConfiguration mode option.
      */
     function getMode<T>(config: CodeMirror.EditorConfiguration, mode: any): Mode<T>;
+
+    /** Define a mimetype.
+     */
+    function defineMIME(mimetype: string, mode: any): void;
+
+    /**
+     * A mode that encompasses many mode types.
+     */
+    function multiplexingMode<T>(...modes: any[]): Mode<T>;
 
     /**
      * Utility function from the overlay.js addon that allows modes to be combined. The mode given as the base argument takes care of
